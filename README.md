@@ -1,4 +1,4 @@
-# whisper-gst-streamer
+# whisper-streamer
 
 This project is called **whisper-gst-streamer**.
 
