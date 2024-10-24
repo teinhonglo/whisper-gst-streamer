@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="../lib/dictate.js"></script>
+        <script src="../lib/recorder.js"></script>
+        <script src="other/jquery-3.3.1.slim.min.js"></script>
+        <script src="other/popper.min.js"></script>
+        <script src="asr.js"></script>
+        <script src="other/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();
+            });
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+        <link rel="icon" href="./image/smil.jpg">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>中英文即時語音辨識系統</title>
+    </head>
+
+    <body class="text-center">
+            <span id="serverStatusBar" title="Number of available workers"></span>
+            <header style="color:white">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="navbar-brand ">
+                                    <img style="width:40px; height:auto" src="./image/smil.jpg"></img>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    其他
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mx-auto order-0">
+                        <a class="navbar-brand mx-auto" style="font-family:Microsoft JhengHei;" href=""><strong>即時中英文語音辨識</strong></a>
+                    </div>
+                    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                        
+                    </div>
+                </nav>
+            </header>
+            <br><br>
+            <div class="row no-gutters">
+                <div class="col-md-1" style="text-align:right;"></div>
+                <div class="card-deck col-md-10">
+                    <div class="card h-100 box-shadow">
+                            <br>
+                            <div align="center">
+                                <button id="buttonStart" style="display:block" class="btn btn-circle btn-lg btn-outline-success" onclick="startListening();" title="Starts listening for speech, i.e. starts recording and transcribing."><i class="fa fa-microphone"></i></button>
+                                <button id="buttonStop"  style="display:none" class="btn btn-circle btn-lg btn-outline-warning" onclick="stopListening();" title="Stops listening for speech. Speech captured so far will be recognized as if the user had stopped speaking at this point. Note that in the default case, this does not need to be called, as the speech endpointer will automatically stop the recognizer listening when it determines speech has completed."><i class="fa fa-pause"></i></button>        
+                            </div>
+                            <br>
+                            <br>
+                            <div class="text-center">
+                                <span id="transcript" style="font-family:Microsoft JhengHei; font-size: 30px; vertical-align: middle"></span>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-1" style="text-align:left;"></div>
+                <audio id="audioRecording"></audio>
+            </div>
+            <div id="log" style="font-family:Times New Roman, Times, serif; font-size: 20px"></div>
+            <div>
+                <div id="errMsg"></div>
+            </div>
+            <div>
+                <div id="statusBar"></div>
+            </div>
+    </body>
+
+</html>
+

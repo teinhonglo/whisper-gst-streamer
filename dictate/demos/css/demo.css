@@ -1,0 +1,52 @@
+.btn-circle {
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	padding: 6px 0;
+	font-size: 12px;
+	line-height: 1.428571429;
+	border-radius: 15px;
+}
+.btn-circle.btn-lg {
+	width: 50px;
+	height: 50px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.33;
+	border-radius: 25px;
+}
+.btn-circle.btn-xl {
+	width: 70px;
+	height: 70px;
+	padding: 10px 16px;
+	font-size: 24px;
+	line-height: 1.33;
+	border-radius: 35px;
+}
+.da {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+#log {
+	font-size: 80%
+}
+#statusBar {
+	font-family: monospace;
+	color: #9F000F;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0;
+}
+#serverStatusBar {
+	position: fixed;
+	bottom: 0.4em;
+	right: 0.4em;
+	top: auto;
+	left: auto;
+	font-family: monospace;
+	padding: 0.2em 0.2em 0.2em 0.2em;
+}

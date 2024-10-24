@@ -1,0 +1,41 @@
+local_pretrained_path: /home/teinhonglo/grading-system/models/pretrained_models
+# prompts
+prompts: "a01,a02,a03,b01,b02,b03,b04,b05,b06,c02,c04,c05"
+#prompts: "a03,b05"
+# question infomation
+# a
+a01 : models/graders/cefr_sp/a01
+a01_code: local/graders/cefr_sp
+a02 : models/graders/cefr_sp/a02
+a02_code: local/graders/cefr_sp
+a03 : models/graders/cefr_sp/a03
+a03_code: local/graders/cefr_sp
+# b
+b01 : models/graders/cefr_sp/b01
+b01_code: local/graders/cefr_sp
+b02 : models/graders/cefr_sp/b02
+b02_code: local/graders/cefr_sp
+b03 : models/graders/cefr_sp/b03
+b03_code: local/graders/cefr_sp
+b04 : models/graders/cefr_sp/b04
+b04_code: local/graders/cefr_sp
+b05 : models/graders/cefr_sp/b05
+b05_code: local/graders/cefr_sp
+b06 : models/graders/cefr_sp/b06
+b06_code: local/graders/cefr_sp
+# c
+c01 : models/graders/cefr_sp/c01
+c01_code: local/graders/cefr_sp
+c02 : models/graders/cefr_sp/c02
+c02_code: local/graders/cefr_sp
+c04 : models/graders/cefr_sp/c04
+c04_code: local/graders/cefr_sp
+c05 : models/graders/cefr_sp/c05
+c05_code: local/graders/cefr_sp
+# seconds
+b02_01_sec: 30
+c01_01_sec: 30
+c01_02_sec: 30
+c01_03_sec: 30
+b01_01_sec: 30
+c02_03_sec: 30

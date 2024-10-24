@@ -1,0 +1,32 @@
+use-vad: False
+silence-timeout: 300
+frontend-timeout: 300
+decoder-timeout : 10
+
+model_config:
+    name: "whisper_small"
+    model_path: "models/stt/whispers/medium.pt"
+    if_ckpt_path: "models/stt/cif_models/medium.pt"
+    segment_length: 1.0
+    frame_threshold: 12
+    buffer_len: 20
+    min_seg_len: 0.0
+    language: "zh"
+    
+# Just a sample post-processor that appends "." to the hypothesis
+# post-processor: perl -npe 'BEGIN {use IO::Handle; STDOUT->autoflush(1);} s/(.*)/\1./;'
+logging:
+    version : 1
+    disable_existing_loggers: False
+    formatters:
+        simpleFormater:
+            format: '%(asctime)s - %(levelname)7s: %(name)10s: %(message)s'
+            datefmt: '%Y-%m-%d %H:%M:%S'
+    handlers:
+        console:
+            class: logging.StreamHandler
+            formatter: simpleFormater
+            level: DEBUG
+    root:
+        level: DEBUG
+        handlers: [console]

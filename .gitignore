@@ -1,0 +1,14 @@
+src
+*wav
+*.pem
+*.pyc
+models
+texts
+wavs
+demo_wavs
+parse_options.sh
+utils
+steps
+
+supervisor
+!supervisor/supervisord.conf
