@@ -1,6 +1,6 @@
-# whisper-gst-streamer
+# whisper-streamer
 
-This project is called **whisper-gst-streamer**.
+This project is called **whisper-streamer**.
 
 It references to **kaldi-gstreamer**, **dictate.js** and **simul_whisper**.
 1. kaldi-gstreamer: [Link](https://github.com/alumae/kaldi-gstreamer-server)
