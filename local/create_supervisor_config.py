@@ -4,7 +4,7 @@ import os
 default_pwd = os.getcwd()
 default_outdir = os.path.join(default_pwd, "supervisor")
 pwd = input(f"Please enter the directory path (default: {default_pwd}): ") or default_pwd
-port = input("Please enter the port number: ")
+port = input("Please enter the port number of the master server (e.g., 9988): ")
 outdir = input(f"Please enter the output directory: (default: {default_outdir})") or default_outdir
 
 # Define the content of the file
@@ -60,7 +60,7 @@ print(f"Configuration file created at {config_file_path}")
 
 ## supervisord_worker.conf
 default_hostname = "127.0.0.1"
-hostname = input(f"Please enter the directory path (default: {default_hostname}): ") or default_hostname
+hostname = input(f"Please enter the port of the master server (default: {default_hostname}): ") or default_hostname
 # Define the content of the file
 config_content = f"""
 [supervisord]
